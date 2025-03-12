@@ -1,0 +1,112 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    margin: 0;
+    overflow: hidden;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7); }
+    to { text-shadow: 0px 0px 20px rgba(255, 255, 255, 1); }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.name-container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.name-container .input-field {
+    width: 50%;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: #f7f7f7;
+    font-size: 16px;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    box-sizing: border-box; /* ✅ Fixes width issues */
+}
+
+.input-field:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0, 114, 255, 0.8), 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-color: #0072ff;
+}
+
+/* ✅ Password Field Styling */
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.password-container .input-field {
+    width: 100%;
+}
+
+.password-container .toggle-password {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    color: gray;
+    transition: 0.3s;
+}
+
+.password-container .toggle-password:hover {
+    color: #0072ff;
+}
+
+button {
+    background: #0072ff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background: #005ecb;
+}
+
+.hidden {
+    display: none;
+}
